@@ -1,0 +1,54 @@
+"1","[1] 106574     15
+"
+"0","```r
+echonest_subset %>% dim()
+```"
+"1","[1] 13129     6
+"
+"0","```r
+joined_df %>% dim()
+```"
+"1","[1] 13129    20
+"
+"0","```r
+## This was just to write to csv
+write.csv(x = joined_df, file = \"raw-data/tracks_echonest_joined.csv\")
+## read the table back in
+tracks_echonest_joined <- read.csv(\"raw-data/tracks_echonest_joined.csv\", colClasses=\"character\")
+tracks_echonest_joined[,1] <- NULL
+# Checking the dimensions after the join
+tracks %>% dim() # -> 106574 53
+```"
+"1","[1] 106574     53
+"
+"0","```r
+echonest %>% dim() # -> [1] 13128 250
+```"
+"1","[1] 13129   250
+"
+"0","```r
+joined_df %>% dim() # -> [1] 13128   302
+```"
+"1","[1] 13129    20
+"
+"0","```r
+# joined_df has the same length as echonest, so the key worked. Also 52+250 vectors = 302 vectors, Yay!
+# temporalfeatures <- subset(x = merge, select = temporalfeatures.000:temporalfeatures.223)
+# This selects just the temporal, which we prob don't want
+getCorrelation <- function(.) {
+  .[, lapply(., is.numeric)
+      %>% unlist()
+    ] %>%
+    cor()
+}
+# This checks which columns in the merged frames have correlation
+joined_df %>%
+  getCorrelation()
+```"
+"1","<0 x 0 matrix>
+"
+"0","```r
+# probablyWhatWeWant %>%
+  # getCorrelation()
+# But unfortunately this is broken until we fix the number columns and ignore any character vectors
+```"
