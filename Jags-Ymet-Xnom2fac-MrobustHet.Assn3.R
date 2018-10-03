@@ -8,7 +8,7 @@ source("DBDA2E-utilities.R")
 #===============================================================================
 
 genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
-                    numSavedSteps=50000 ,  thinSteps=1 , saveName=NULL ,
+                    numSavedSteps=5000 ,  thinSteps=1 , saveName=NULL ,
                     runjagsMethod=runjagsMethodDefault , 
                     nChains=nChainsDefault ) { 
   #------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
                   "a1SD" , "a2SD" , "a1a2SD" ,
                   "ySigma" , "sigmaMode" , "sigmaSD" , "nu" )
   adaptSteps = 1000 
-  burnInSteps = 2000 
+  burnInSteps = 500 
   runJagsOut <- run.jags( method=runjagsMethod ,
                           model="TEMPmodel.txt" , 
                           monitor=parameters , 
