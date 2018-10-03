@@ -144,7 +144,18 @@ $1$: can also be thought of as deviations
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 
-write.csv(SocialSecLong, file="SocialSecLong.csv")
+write.csv(SocialSecLong,
+          file="SocialSecLong.csv",
+          row.names = F)
+
+# The model doesn't work with NA, so NAs will be removed
+
+SocialSecNA.RM <- filter(SocialSecLong, !is.na(`Commonwealth_Electoral_Division_No.`))
+
+write.csv(SocialSecNA.RM,
+          file="SocialSecNA.RM.csv",
+          row.names = F)
+
 
 ```
 

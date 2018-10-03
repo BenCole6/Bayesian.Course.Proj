@@ -8,9 +8,9 @@ source("DBDA2E-utilities.R")
 #===============================================================================
 
 genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
-                    numSavedSteps=5000 ,  thinSteps=1 , saveName=NULL ,
+                    numSavedSteps=5000 ,  thinSteps=1 , saveName=saveName ,
                     runjagsMethod=runjagsMethodDefault , 
-                    nChains=nChainsDefault ) { 
+                    nChains=1 ) { 
   #------------------------------------------------------------------------------
   # THE DATA.
   # Convert data file columns to generic x,y variable names for model:
@@ -138,9 +138,9 @@ genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
 
 
 smryMCMC = function(  codaSamples , 
-                      datFrm=NULL , x1Name=NULL , x2Name=NULL ,
-                      x1contrasts=NULL , x2contrasts=NULL , x1x2contrasts=NULL ,
-                      saveName=NULL ) {
+                      datFrm , x1Name=x1Name , x2Name=x2Name ,
+                      x1contrasts=x1contrasts , x2contrasts=x2contrasts , x1x2contrasts=x1x2contrasts ,
+                      saveName=saveName ) {
   # All single parameters:
   parameterNames = varnames(codaSamples) 
   if ( !is.null(datFrm) & !is.null(x1Name) & !is.null(x2Name) ) {
@@ -301,11 +301,11 @@ smryMCMC = function(  codaSamples ,
 
 
 plotMCMC = function( codaSamples , 
-                     datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
-                     x1contrasts=NULL , 
-                     x2contrasts=NULL , 
-                     x1x2contrasts=NULL ,
-                     saveName=NULL , saveType="jpg" ) {
+                     datFrm, yName="y" , x1Name=x1Name, x2Name=x2Name ,
+                     x1contrasts=x1contrasts , 
+                     x2contrasts=x2contrasts , 
+                     x1x2contrasts=x1x2contrasts ,
+                     saveName=saveName , saveType="jpg" ) {
   mcmcMat = as.matrix(codaSamples,chains=TRUE)
   chainLength = NROW( mcmcMat )
   y = datFrm[,yName]

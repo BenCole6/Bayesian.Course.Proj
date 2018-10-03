@@ -1,5 +1,4 @@
 "Commonwealth_Electoral_Division_No.","Commonwealth_Electoral_Division_Name","State","payment_type","amount"
-NA,"Unknown","Unknown","abstudy__non_living_allowance_",57
 101,"Banks","New South Wales","abstudy__non_living_allowance_",27
 102,"Barton","New South Wales","abstudy__non_living_allowance_",28
 103,"Bennelong","New South Wales","abstudy__non_living_allowance_",20
@@ -150,7 +149,6 @@ NA,"Unknown","Unknown","abstudy__non_living_allowance_",57
 702,"Solomon","Northern Territory","abstudy__non_living_allowance_",417
 801,"Canberra","Australian Capital Territory","abstudy__non_living_allowance_",80
 802,"Fraser","Australian Capital Territory","abstudy__non_living_allowance_",77
-NA,"Unknown","Unknown","abstudy__living_allowance_",20
 101,"Banks","New South Wales","abstudy__living_allowance_",20
 102,"Barton","New South Wales","abstudy__living_allowance_",22
 103,"Bennelong","New South Wales","abstudy__living_allowance_",23
@@ -301,7 +299,6 @@ NA,"Unknown","Unknown","abstudy__living_allowance_",20
 702,"Solomon","Northern Territory","abstudy__living_allowance_",113
 801,"Canberra","Australian Capital Territory","abstudy__living_allowance_",36
 802,"Fraser","Australian Capital Territory","abstudy__living_allowance_",65
-NA,"Unknown","Unknown","age_pension",84213
 101,"Banks","New South Wales","age_pension",16278
 102,"Barton","New South Wales","age_pension",17357
 103,"Bennelong","New South Wales","age_pension",14022
@@ -452,7 +449,6 @@ NA,"Unknown","Unknown","age_pension",84213
 702,"Solomon","Northern Territory","age_pension",4493
 801,"Canberra","Australian Capital Territory","age_pension",11976
 802,"Fraser","Australian Capital Territory","age_pension",11015
-NA,"Unknown","Unknown","austudy",57
 101,"Banks","New South Wales","austudy",303
 102,"Barton","New South Wales","austudy",306
 103,"Bennelong","New South Wales","austudy",422
@@ -603,7 +599,6 @@ NA,"Unknown","Unknown","austudy",57
 702,"Solomon","Northern Territory","austudy",125
 801,"Canberra","Australian Capital Territory","austudy",226
 802,"Fraser","Australian Capital Territory","austudy",500
-NA,"Unknown","Unknown","carer_allowance",560
 101,"Banks","New South Wales","carer_allowance",4099
 102,"Barton","New South Wales","carer_allowance",4380
 103,"Bennelong","New South Wales","carer_allowance",2585
@@ -754,7 +749,6 @@ NA,"Unknown","Unknown","carer_allowance",560
 702,"Solomon","Northern Territory","carer_allowance",1440
 801,"Canberra","Australian Capital Territory","carer_allowance",2646
 802,"Fraser","Australian Capital Territory","carer_allowance",2775
-NA,"Unknown","Unknown","carer_allowance__child_hcc_only_",20
 101,"Banks","New South Wales","carer_allowance__child_hcc_only_",145
 102,"Barton","New South Wales","carer_allowance__child_hcc_only_",107
 103,"Bennelong","New South Wales","carer_allowance__child_hcc_only_",84
@@ -905,7 +899,6 @@ NA,"Unknown","Unknown","carer_allowance__child_hcc_only_",20
 702,"Solomon","Northern Territory","carer_allowance__child_hcc_only_",89
 801,"Canberra","Australian Capital Territory","carer_allowance__child_hcc_only_",115
 802,"Fraser","Australian Capital Territory","carer_allowance__child_hcc_only_",122
-NA,"Unknown","Unknown","carer_payment",322
 101,"Banks","New South Wales","carer_payment",1807
 102,"Barton","New South Wales","carer_payment",1718
 103,"Bennelong","New South Wales","carer_payment",949
@@ -1056,7 +1049,6 @@ NA,"Unknown","Unknown","carer_payment",322
 702,"Solomon","Northern Territory","carer_payment",520
 801,"Canberra","Australian Capital Territory","carer_payment",605
 802,"Fraser","Australian Capital Territory","carer_payment",674
-NA,"Unknown","Unknown","double_orphan_pension",20
 101,"Banks","New South Wales","double_orphan_pension",20
 102,"Barton","New South Wales","double_orphan_pension",20
 103,"Bennelong","New South Wales","double_orphan_pension",20
@@ -1207,7 +1199,6 @@ NA,"Unknown","Unknown","double_orphan_pension",20
 702,"Solomon","Northern Territory","double_orphan_pension",20
 801,"Canberra","Australian Capital Territory","double_orphan_pension",20
 802,"Fraser","Australian Capital Territory","double_orphan_pension",20
-NA,"Unknown","Unknown","disability_support_pension",8618
 101,"Banks","New South Wales","disability_support_pension",4000
 102,"Barton","New South Wales","disability_support_pension",3874
 103,"Bennelong","New South Wales","disability_support_pension",3318
@@ -1358,7 +1349,6 @@ NA,"Unknown","Unknown","disability_support_pension",8618
 702,"Solomon","Northern Territory","disability_support_pension",3240
 801,"Canberra","Australian Capital Territory","disability_support_pension",4064
 802,"Fraser","Australian Capital Territory","disability_support_pension",4713
-NA,"Unknown","Unknown","family_tax_benefit_a",3505
 101,"Banks","New South Wales","family_tax_benefit_a",10234
 102,"Barton","New South Wales","family_tax_benefit_a",9260
 103,"Bennelong","New South Wales","family_tax_benefit_a",7217
@@ -1509,7 +1499,6 @@ NA,"Unknown","Unknown","family_tax_benefit_a",3505
 702,"Solomon","Northern Territory","family_tax_benefit_a",6589
 801,"Canberra","Australian Capital Territory","family_tax_benefit_a",7177
 802,"Fraser","Australian Capital Territory","family_tax_benefit_a",9042
-NA,"Unknown","Unknown","family_tax_benefit_b",2703
 101,"Banks","New South Wales","family_tax_benefit_b",8739
 102,"Barton","New South Wales","family_tax_benefit_b",7859
 103,"Bennelong","New South Wales","family_tax_benefit_b",6261
@@ -1660,7 +1649,6 @@ NA,"Unknown","Unknown","family_tax_benefit_b",2703
 702,"Solomon","Northern Territory","family_tax_benefit_b",5973
 801,"Canberra","Australian Capital Territory","family_tax_benefit_b",6755
 802,"Fraser","Australian Capital Territory","family_tax_benefit_b",8434
-NA,"Unknown","Unknown","health_care_card",2929
 101,"Banks","New South Wales","health_care_card",8881
 102,"Barton","New South Wales","health_care_card",7873
 103,"Bennelong","New South Wales","health_care_card",6525
@@ -1811,7 +1799,6 @@ NA,"Unknown","Unknown","health_care_card",2929
 702,"Solomon","Northern Territory","health_care_card",4889
 801,"Canberra","Australian Capital Territory","health_care_card",5828
 802,"Fraser","Australian Capital Territory","health_care_card",8767
-NA,"Unknown","Unknown","low_income_card",817
 101,"Banks","New South Wales","low_income_card",1974
 102,"Barton","New South Wales","low_income_card",1643
 103,"Bennelong","New South Wales","low_income_card",1881
@@ -1962,7 +1949,6 @@ NA,"Unknown","Unknown","low_income_card",817
 702,"Solomon","Northern Territory","low_income_card",418
 801,"Canberra","Australian Capital Territory","low_income_card",1125
 802,"Fraser","Australian Capital Territory","low_income_card",2673
-NA,"Unknown","Unknown","newstart_allowance",416
 101,"Banks","New South Wales","newstart_allowance",3950
 102,"Barton","New South Wales","newstart_allowance",3577
 103,"Bennelong","New South Wales","newstart_allowance",2444
@@ -2113,7 +2099,6 @@ NA,"Unknown","Unknown","newstart_allowance",416
 702,"Solomon","Northern Territory","newstart_allowance",2455
 801,"Canberra","Australian Capital Territory","newstart_allowance",2549
 802,"Fraser","Australian Capital Territory","newstart_allowance",3357
-NA,"Unknown","Unknown","parenting_payment_partnered",122
 101,"Banks","New South Wales","parenting_payment_partnered",847
 102,"Barton","New South Wales","parenting_payment_partnered",791
 103,"Bennelong","New South Wales","parenting_payment_partnered",431
@@ -2264,7 +2249,6 @@ NA,"Unknown","Unknown","parenting_payment_partnered",122
 702,"Solomon","Northern Territory","parenting_payment_partnered",312
 801,"Canberra","Australian Capital Territory","parenting_payment_partnered",275
 802,"Fraser","Australian Capital Territory","parenting_payment_partnered",448
-NA,"Unknown","Unknown","parenting_payment_single",120
 101,"Banks","New South Wales","parenting_payment_single",1062
 102,"Barton","New South Wales","parenting_payment_single",946
 103,"Bennelong","New South Wales","parenting_payment_single",508
@@ -2415,7 +2399,6 @@ NA,"Unknown","Unknown","parenting_payment_single",120
 702,"Solomon","Northern Territory","parenting_payment_single",1327
 801,"Canberra","Australian Capital Territory","parenting_payment_single",1224
 802,"Fraser","Australian Capital Territory","parenting_payment_single",1403
-NA,"Unknown","Unknown","partner_allowance",20
 101,"Banks","New South Wales","partner_allowance",61
 102,"Barton","New South Wales","partner_allowance",66
 103,"Bennelong","New South Wales","partner_allowance",27
@@ -2566,7 +2549,6 @@ NA,"Unknown","Unknown","partner_allowance",20
 702,"Solomon","Northern Territory","partner_allowance",20
 801,"Canberra","Australian Capital Territory","partner_allowance",21
 802,"Fraser","Australian Capital Territory","partner_allowance",20
-NA,"Unknown","Unknown","pensioner_concession_card",8826
 101,"Banks","New South Wales","pensioner_concession_card",25183
 102,"Barton","New South Wales","pensioner_concession_card",25413
 103,"Bennelong","New South Wales","pensioner_concession_card",19922
@@ -2717,7 +2699,6 @@ NA,"Unknown","Unknown","pensioner_concession_card",8826
 702,"Solomon","Northern Territory","pensioner_concession_card",10132
 801,"Canberra","Australian Capital Territory","pensioner_concession_card",18747
 802,"Fraser","Australian Capital Territory","pensioner_concession_card",18865
-NA,"Unknown","Unknown","commonwealth_seniors_health_card",557
 101,"Banks","New South Wales","commonwealth_seniors_health_card",2417
 102,"Barton","New South Wales","commonwealth_seniors_health_card",2373
 103,"Bennelong","New South Wales","commonwealth_seniors_health_card",3004
@@ -2868,7 +2849,6 @@ NA,"Unknown","Unknown","commonwealth_seniors_health_card",557
 702,"Solomon","Northern Territory","commonwealth_seniors_health_card",533
 801,"Canberra","Australian Capital Territory","commonwealth_seniors_health_card",2802
 802,"Fraser","Australian Capital Territory","commonwealth_seniors_health_card",2476
-NA,"Unknown","Unknown","sickness_allowance",20
 101,"Banks","New South Wales","sickness_allowance",38
 102,"Barton","New South Wales","sickness_allowance",38
 103,"Bennelong","New South Wales","sickness_allowance",26
@@ -3019,7 +2999,6 @@ NA,"Unknown","Unknown","sickness_allowance",20
 702,"Solomon","Northern Territory","sickness_allowance",38
 801,"Canberra","Australian Capital Territory","sickness_allowance",56
 802,"Fraser","Australian Capital Territory","sickness_allowance",42
-NA,"Unknown","Unknown","special_benefit",26
 101,"Banks","New South Wales","special_benefit",237
 102,"Barton","New South Wales","special_benefit",99
 103,"Bennelong","New South Wales","special_benefit",142
@@ -3170,7 +3149,6 @@ NA,"Unknown","Unknown","special_benefit",26
 702,"Solomon","Northern Territory","special_benefit",20
 801,"Canberra","Australian Capital Territory","special_benefit",20
 802,"Fraser","Australian Capital Territory","special_benefit",46
-NA,"Unknown","Unknown","widow_allowance",64
 101,"Banks","New South Wales","widow_allowance",297
 102,"Barton","New South Wales","widow_allowance",248
 103,"Bennelong","New South Wales","widow_allowance",204
@@ -3321,7 +3299,6 @@ NA,"Unknown","Unknown","widow_allowance",64
 702,"Solomon","Northern Territory","widow_allowance",54
 801,"Canberra","Australian Capital Territory","widow_allowance",71
 802,"Fraser","Australian Capital Territory","widow_allowance",87
-NA,"Unknown","Unknown","wife_pension__age_",334
 101,"Banks","New South Wales","wife_pension__age_",56
 102,"Barton","New South Wales","wife_pension__age_",66
 103,"Bennelong","New South Wales","wife_pension__age_",21
@@ -3472,7 +3449,6 @@ NA,"Unknown","Unknown","wife_pension__age_",334
 702,"Solomon","Northern Territory","wife_pension__age_",20
 801,"Canberra","Australian Capital Territory","wife_pension__age_",23
 802,"Fraser","Australian Capital Territory","wife_pension__age_",20
-NA,"Unknown","Unknown","wife_pension__dsp_",368
 101,"Banks","New South Wales","wife_pension__dsp_",33
 102,"Barton","New South Wales","wife_pension__dsp_",31
 103,"Bennelong","New South Wales","wife_pension__dsp_",20
@@ -3623,7 +3599,6 @@ NA,"Unknown","Unknown","wife_pension__dsp_",368
 702,"Solomon","Northern Territory","wife_pension__dsp_",20
 801,"Canberra","Australian Capital Territory","wife_pension__dsp_",20
 802,"Fraser","Australian Capital Territory","wife_pension__dsp_",20
-NA,"Unknown","Unknown","widow_b_pension",440
 101,"Banks","New South Wales","widow_b_pension",20
 102,"Barton","New South Wales","widow_b_pension",20
 103,"Bennelong","New South Wales","widow_b_pension",20
@@ -3774,7 +3749,6 @@ NA,"Unknown","Unknown","widow_b_pension",440
 702,"Solomon","Northern Territory","widow_b_pension",20
 801,"Canberra","Australian Capital Territory","widow_b_pension",20
 802,"Fraser","Australian Capital Territory","widow_b_pension",20
-NA,"Unknown","Unknown","youth_allowance__other_",91
 101,"Banks","New South Wales","youth_allowance__other_",291
 102,"Barton","New South Wales","youth_allowance__other_",270
 103,"Bennelong","New South Wales","youth_allowance__other_",161
@@ -3925,7 +3899,6 @@ NA,"Unknown","Unknown","youth_allowance__other_",91
 702,"Solomon","Northern Territory","youth_allowance__other_",442
 801,"Canberra","Australian Capital Territory","youth_allowance__other_",447
 802,"Fraser","Australian Capital Territory","youth_allowance__other_",608
-NA,"Unknown","Unknown","youth_allowance__student_",650
 101,"Banks","New South Wales","youth_allowance__student_",1721
 102,"Barton","New South Wales","youth_allowance__student_",1439
 103,"Bennelong","New South Wales","youth_allowance__student_",1841
@@ -4076,7 +4049,6 @@ NA,"Unknown","Unknown","youth_allowance__student_",650
 702,"Solomon","Northern Territory","youth_allowance__student_",276
 801,"Canberra","Australian Capital Territory","youth_allowance__student_",908
 802,"Fraser","Australian Capital Territory","youth_allowance__student_",3361
-NA,"Unknown","Unknown","youth_allowance__apprentice_",20
 101,"Banks","New South Wales","youth_allowance__apprentice_",32
 102,"Barton","New South Wales","youth_allowance__apprentice_",30
 103,"Bennelong","New South Wales","youth_allowance__apprentice_",20

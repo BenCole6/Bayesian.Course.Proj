@@ -8,7 +8,7 @@
 
 fileNameRoot = "Assn3" 
 graphFileType = "png" 
-myDataFrame = read.csv( file="SocialSecLong.csv" )
+myDataFrame = read.csv( file="SocialSecNA.RM.csv" )
 # Re-label and re-order the Pos factor:
 # myDataFrame$Pos = factor( myDataFrame$Pos , 
 #                           levels=c("FT3","FT2","FT1","NDW","DST") , 
@@ -17,13 +17,24 @@ myDataFrame = read.csv( file="SocialSecLong.csv" )
 # Specify the column names in the data file relevant to the analysis:
 yName="amount" 
 # x1 should be factor with fewer levels, to plot in single pane:
-x1Name="payment_type" 
-x2Name="Commonwealth_Electoral_Division_Name" 
+x1Name <- "payment_type" 
+x2Name <- "Commonwealth_Electoral_Division_Name" 
 # Specify desired contrasts.
 # Each main-effect contrast is a list of 2 vectors of level names, 
 # a comparison value (typically 0.0), and a ROPE (which could be NULL):
 
 x1contrasts = list( 
+  
+  # family_tax_benefit_a
+  list( c("family_tax_benefit_a") , c("family_tax_benefit_b") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("family_tax_benefit_a") , c("healthcare_card") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  
+  # family_tax_benefit_b
+  list( c("family_tax_benefit_b") , c("healthcare_card") , compVal=0.0 , ROPE=c(-1000,1000) )
+)
+
+x2contrasts = list( 
+  
   # Melbourne
   list( c("Melbourne") , c("Kooyong") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
   list( c("Melbourne") , c("Higgins") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
@@ -37,36 +48,14 @@ x1contrasts = list(
   list( c("Higgins") , c("Gellibrand") , compVal=0.0 , ROPE=c(-1000,1000) )
 )
 
-x2contrasts = list( 
-  # family_tax_benefit_a
-  list( c("family_tax_benefit_a") , c("family_tax_benefit_b") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( c("family_tax_benefit_a") , c("healthcare_card") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  
-  # family_tax_benefit_b
-  list( c("family_tax_benefit_b") , c("healthcare_card") , compVal=0.0 , ROPE=c(-1000,1000) )
-)
-# Each interaction contrast is a list of 2 lists of 2 vectors of level names, 
-# a comparison value (typically 0.0), and a ROPE (which could be NULL)::
-x1x2contrasts = list( 
-  list( list( c("Full") , c("Assis") ) ,
-        list( c("CHEM") , c("ENG") ) ,
-        compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( list( c("Full") , c("Assis") ) ,
-        list( c("CHEM") , c("PSY") ) ,
-        compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( list( c("Full") , c("Assoc","Assis") ) ,
-        list( c("BFIN") , c("PSY","CHEM","ENG") ) , 
-        compVal=0.0 , ROPE=c(-1000,1000) )
-) 
-
 #------------------------------------------------------------------------------- 
 # Load the relevant model into R's working memory:
-source("Jags-Ymet-Xnom2fac-MrobustHet.R")
+source("Jags-Ymet-Xnom2fac-MnormalHom-Assn3.R")
 #------------------------------------------------------------------------------- 
 # Generate the MCMC chain:
 mcmcCoda = genMCMC( datFrm=myDataFrame , 
                     yName=yName , x1Name=x1Name , x2Name=x2Name ,
-                    numSavedSteps=15000 , thinSteps=5 , saveName=fileNameRoot )
+                    numSavedSteps=5000 , thinSteps=2 , saveName=fileNameRoot )
 #------------------------------------------------------------------------------- 
 # Display diagnostics of chain, for specified parameters:
 parameterNames = varnames(mcmcCoda) 
@@ -86,7 +75,7 @@ summaryInfo = smryMCMC( mcmcCoda ,
 show(summaryInfo)
 # Display posterior information:
 plotMCMC( mcmcCoda , 
-          datFrm=myDataFrame , yName=yName , x1Name=x1Name , x2Name=x2Name ,
+          datFrm , yName=yName , x1Name=x1Name , x2Name=x2Name ,
           x1contrasts=x1contrasts , 
           x2contrasts=x2contrasts , 
           x1x2contrasts=x1x2contrasts ,
@@ -95,9 +84,9 @@ plotMCMC( mcmcCoda ,
 # Other specific comparisons of cells:
 if ( fileNameRoot == "Assn3" ) {
   # THIS x1level minus THAT x1level at AT x2level:
-  THISx1 = "Full"
-  THATx1 = "Assis"
-  ATx2 = "CHEM"
+  THISx1 = "family_tax_benefit_a"
+  THATx1 = "family_tax_benefit_b"
+  ATx2 = "Melbourne"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -112,9 +101,9 @@ if ( fileNameRoot == "Assn3" ) {
   saveGraph(file=paste(fileNameRoot,THISx1,"-",THATx1,"At",ATx2,sep=""),
             type=graphFileType)
   # THIS x1level minus THAT x1level at AT x2level:
-  THISx1 = "Full"
-  THATx1 = "Assis"
-  ATx2 = "PSY"
+  THISx1 = "family_tax_benefit_a"
+  THATx1 = "healthcare_card"
+  ATx2 = "Kooyong"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -129,9 +118,9 @@ if ( fileNameRoot == "Assn3" ) {
   saveGraph(file=paste(fileNameRoot,THISx1,"-",THATx1,"At",ATx2,sep=""),
             type=graphFileType)
   # THIS x2level minus THAT x2level at AT x1level:
-  THISx2 = "PSY"
-  THATx2 = "ENG"
-  ATx1 = "Full"
+  THISx2 = "Melbourne"
+  THATx2 = "Kooyong"
+  ATx1 = "healthcare_card"
   THISidx = which(levels(myDataFrame[,x2Name])==THISx2)
   THATidx = which(levels(myDataFrame[,x2Name])==THATx2)
   ATidx   = which(levels(myDataFrame[,x1Name])==ATx1)

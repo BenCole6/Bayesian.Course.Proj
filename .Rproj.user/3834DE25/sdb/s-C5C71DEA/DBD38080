@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "Org                 OrgName Cla Pos ClaPos Salary\n1   PL              Philosophy  PC FT2 PC.FT2  72395\n2 MUTH            Music Theory  PC FT2 PC.FT2  61017\n3  ENG                 English  PC FT2 PC.FT2  82370\n4 CMLT  Comparative Literature  PC FT2 PC.FT2  68805\n5 LGED      Language Education  PT FT3 PT.FT3  63796\n6 MGMT Dept Mangement & Entrep  PR NDW PR.NDW 219600\n\n# A tibble: 6 x 5\nCommonwealth_Electoral_Division_No. Commonwealth_Electoral_Division_Name State           payment_type amount\n<int> <chr>                                <chr>           <chr>         <dbl>\n  1                                  NA Unknown                              Unknown         abstudy__no~    57.\n2                                 101 Banks                                New South Wales abstudy__no~    27.\n3                                 102 Barton                               New South Wales abstudy__no~    28.\n4                                 103 Bennelong                            New South Wales abstudy__no~    20.\n5                                 104 Berowra                              New South Wales abstudy__no~    20.\n6                                 105 Blaxland                             New South Wales abstudy__no~    46.",
+    "created" : 1538562125538.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3355885769",
+    "id" : "DBD38080",
+    "lastKnownWriteTime" : 6727019247881167464,
+    "last_content_update" : 1538562833624,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
