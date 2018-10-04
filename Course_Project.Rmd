@@ -156,6 +156,10 @@ write.csv(SocialSecNA.RM,
           file="SocialSecNA.RM.csv",
           row.names = F)
 
+SocialSecNA.RM$dupe <- SocialSecNA.RM$Commonwealth_Electoral_Division_No.
+
+
+
 
 ```
 

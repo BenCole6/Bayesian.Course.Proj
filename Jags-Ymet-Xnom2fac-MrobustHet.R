@@ -6,7 +6,6 @@
 source("DBDA2E-utilities.R")
 
 #===============================================================================
-head(datFrm)
 
 genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
                     numSavedSteps=50000 ,  thinSteps=1 , saveName=NULL ,

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "x1contrasts = list( \n  \n  # family_tax_benefit_a\n  list( c(\"family_tax_benefit_a\") , c(\"family_tax_benefit_b\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  list( c(\"family_tax_benefit_a\") , c(\"healthcare_card\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  \n  # family_tax_benefit_b\n  list( c(\"family_tax_benefit_b\") , c(\"healthcare_card\") , compVal=0.0 , ROPE=c(-1000,1000) )\n)\n\nx2contrasts = list( \n  \n  # Melbourne\n  list( c(\"Melbourne\") , c(\"Kooyong\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  list( c(\"Melbourne\") , c(\"Higgins\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  list( c(\"Melbourne\") , c(\"Gellibrand\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  \n  # Kooyong\n  list( c(\"Kooyong\") , c(\"Higgins\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  list( c(\"Kooyong\") , c(\"Gellibrand\") , compVal=0.0 , ROPE=c(-1000,1000) ) ,\n  \n  # Higgins\n  list( c(\"Higgins\") , c(\"Gellibrand\") , compVal=0.0 , ROPE=c(-1000,1000) )\n)",
+    "created" : 1538562125538.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "789311307",
+    "id" : "DBD38080",
+    "lastKnownWriteTime" : 6727019247881167464,
+    "last_content_update" : 1538637093265,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
