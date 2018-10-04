@@ -10,11 +10,9 @@ fileNameRoot = "Assn3"
 graphFileType = "eps" 
 myDataFrame = read.csv( file="SocialSecNA.RM.csv" )
 # Re-label and re-order the Pos factor:
-myDataFrame$payment_type = factor( myDataFrame$payment_type, 
-                          ordered=F)
+myDataFrame$payment_type = factor(myDataFrame$payment_type, ordered=F)
 
-myDataFrame$Commonwealth_Electoral_Division_Name = factor(myDataFrame$Commonwealth_Electoral_Division_Name,
-                                                          ordered=F)
+myDataFrame$Commonwealth_Electoral_Division_Name = factor(myDataFrame$Commonwealth_Electoral_Division_Name, ordered=F)
 
 # Specify the column names in the data file relevant to the analysis:
 yName="amount" 
@@ -49,27 +47,27 @@ x2contrasts = list(
   # Higgins
   list( c("Higgins") , c("Gellibrand") , compVal=0.0 , ROPE=c(-1000,1000) )
 )
-)
+
 # Each interaction contrast is a list of 2 lists of 2 vectors of level names, 
 # a comparison value (typically 0.0), and a ROPE (which could be NULL)::
 x1x2contrasts = list( 
-  list( list( c("Full") , c("Assis") ) ,
-        list( c("CHEM") , c("ENG") ) ,
+  list( list( c("family_tax_benefit_a") , c("healthcare_card") ) ,
+        list( c("Kooyong") , c("Melbourne") ) ,
         compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( list( c("Full") , c("Assis") ) ,
-        list( c("CHEM") , c("PSY") ) ,
+  list( list( c("family_tax_benefit_a") , c("healthcare_card") ) ,
+        list( c("Kooyong") , c("Gellibrand") ) ,
         compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( list( c("Full") , c("Assoc","Assis") ) ,
-        list( c("BFIN") , c("PSY","CHEM","ENG") ) , 
+  list( list( c("family_tax_benefit_a") , c("Assoc","healthcare_card") ) ,
+        list( c("BFIN") , c("Gellibrand","Kooyong","Melbourne") ) , 
         compVal=0.0 , ROPE=c(-1000,1000) )
 ) 
 
 #------------------------------------------------------------------------------- 
 # Load the relevant model into R's working memory:
-source("Jags-Ymet-Xnom2fac-MrobustHet.R")
+source("Jags-Ymet-Xnom2fac-MrobustHet.Assn3.R")
+
 #------------------------------------------------------------------------------- 
 # Generate the MCMC chain:
-head(myDataFrame)
 
 mcmcCoda = genMCMC( datFrm=myDataFrame , 
                     yName=yName , x1Name=x1Name , x2Name=x2Name ,
@@ -102,9 +100,9 @@ plotMCMC( mcmcCoda ,
 # Other specific comparisons of cells:
 if ( fileNameRoot == "Assn3" ) {
   # THIS x1level minus THAT x1level at AT x2level:
-  THISx1 = "Full"
-  THATx1 = "Assis"
-  ATx2 = "CHEM"
+  THISx1 = "family_tax_benefit_a"
+  THATx1 = "healthcare_card"
+  ATx2 = "Kooyong"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -119,9 +117,9 @@ if ( fileNameRoot == "Assn3" ) {
   saveGraph(file=paste(fileNameRoot,THISx1,"-",THATx1,"At",ATx2,sep=""),
             type=graphFileType)
   # THIS x1level minus THAT x1level at AT x2level:
-  THISx1 = "Full"
-  THATx1 = "Assis"
-  ATx2 = "PSY"
+  THISx1 = "family_tax_benefit_a"
+  THATx1 = "healthcare_card"
+  ATx2 = "Gellibrand"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -136,9 +134,9 @@ if ( fileNameRoot == "Assn3" ) {
   saveGraph(file=paste(fileNameRoot,THISx1,"-",THATx1,"At",ATx2,sep=""),
             type=graphFileType)
   # THIS x2level minus THAT x2level at AT x1level:
-  THISx2 = "PSY"
-  THATx2 = "ENG"
-  ATx1 = "Full"
+  THISx2 = "Gellibrand"
+  THATx2 = "Melbourne"
+  ATx1 = "family_tax_benefit_a"
   THISidx = which(levels(myDataFrame[,x2Name])==THISx2)
   THATidx = which(levels(myDataFrame[,x2Name])==THATx2)
   ATidx   = which(levels(myDataFrame[,x1Name])==ATx1)
