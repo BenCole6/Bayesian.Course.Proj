@@ -8,7 +8,7 @@
 
 fileNameRoot = "Assn3" 
 graphFileType = "eps" 
-myDataFrame = read.csv( file="SocialSecNA.RM.csv" )
+myDataFrame = read.csv("SocialSecNA.RM.csv")
 # Re-label and re-order the Pos factor:
 myDataFrame$payment_type = factor(myDataFrame$payment_type, ordered=F)
 
@@ -18,7 +18,7 @@ myDataFrame$Commonwealth_Electoral_Division_Name = factor(myDataFrame$Commonweal
 yName="amount" 
 # x1 should be factor with fewer levels, to plot in single pane:
 x1Name="payment_type" 
-x2Name="Commonwealth_Electoral_Division_Name" 
+x2Name="State" 
 # Specify desired contrasts.
 # Each main-effect contrast is a list of 2 vectors of level names, 
 # a comparison value (typically 0.0), and a ROPE (which could be NULL):
@@ -32,33 +32,63 @@ x1contrasts = list(
   # family_tax_benefit_b
   list( c("family_tax_benefit_b") , c("healthcare_card") , compVal=0.0 , ROPE=c(-1000,1000) )
 )
-
+# unique(myDataFrame$State)
 x2contrasts = list( 
   
-  # Melbourne
-  list( c("Melbourne") , c("Kooyong") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( c("Melbourne") , c("Higgins") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( c("Melbourne") , c("Gellibrand") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  # VIC
+  list( c("Victoria") , c("New South Wales") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("Queensland") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("South Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("Western Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("Tasmania") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Victoria") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
   
-  # Kooyong
-  list( c("Kooyong") , c("Higgins") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
-  list( c("Kooyong") , c("Gellibrand") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  # NSW
+  list( c("New South Wales") , c("Queensland") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("New South Wales") , c("South Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("New South Wales") , c("Western Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("New South Wales") , c("Tasmania") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("New South Wales") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("New South Wales") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
   
-  # Higgins
-  list( c("Higgins") , c("Gellibrand") , compVal=0.0 , ROPE=c(-1000,1000) )
+  # QLD
+  list( c("Queensland") , c("South Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Queensland") , c("Western Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Queensland") , c("Tasmania") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Queensland") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Queensland") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  
+  # SA
+  list( c("South Australia") , c("Western Australia") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("South Australia") , c("Tasmania") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("South Australia") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("South Australia") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  
+  # WA
+  list( c("Western Australia") , c("Tasmania") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Western Australia") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Western Australia") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  
+  # Tas
+  list( c("Tasmania") , c("Northern Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  list( c("Tasmania") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) ) ,
+  
+  # ACT
+  list( c("Tasmania") , c("Australian Capital Territory") , compVal=0.0 , ROPE=c(-1000,1000) )
 )
 
 # Each interaction contrast is a list of 2 lists of 2 vectors of level names, 
 # a comparison value (typically 0.0), and a ROPE (which could be NULL)::
 x1x2contrasts = list( 
   list( list( c("family_tax_benefit_a") , c("healthcare_card") ) ,
-        list( c("Kooyong") , c("Melbourne") ) ,
+        list( c("New South Wales") , c("Victoria") ) ,
         compVal=0.0 , ROPE=c(-1000,1000) ) ,
   list( list( c("family_tax_benefit_a") , c("healthcare_card") ) ,
-        list( c("Kooyong") , c("Gellibrand") ) ,
+        list( c("New South Wales") , c("South Australia") ) ,
         compVal=0.0 , ROPE=c(-1000,1000) ) ,
   list( list( c("family_tax_benefit_a") , c("Assoc","healthcare_card") ) ,
-        list( c("BFIN") , c("Gellibrand","Kooyong","Melbourne") ) , 
+        list( c("BFIN") , c("South Australia","New South Wales","Victoria") ) , 
         compVal=0.0 , ROPE=c(-1000,1000) )
 ) 
 
@@ -69,7 +99,7 @@ source("Jags-Ymet-Xnom2fac-MrobustHet.Assn3.R")
 #------------------------------------------------------------------------------- 
 # Generate the MCMC chain:
 
-mcmcCoda = genMCMC( datFrm=myDataFrame , 
+mcmcCoda = genMCMC( datFrm , 
                     yName=yName , x1Name=x1Name , x2Name=x2Name ,
                     numSavedSteps=15000 , thinSteps=5 , saveName=fileNameRoot )
 #------------------------------------------------------------------------------- 
@@ -83,7 +113,7 @@ for ( parName in c("b0","b1[1]","b2[1]","b1b2[1,1]","ySigma[1,1]","ySigma[1,7]",
 #------------------------------------------------------------------------------- 
 # Get summary statistics of chain:
 summaryInfo = smryMCMC( mcmcCoda , 
-                        datFrm=myDataFrame , x1Name=x1Name , x2Name=x2Name ,
+                        datFrm , x1Name=x1Name , x2Name=x2Name ,
                         x1contrasts=x1contrasts , 
                         x2contrasts=x2contrasts , 
                         x1x2contrasts=x1x2contrasts ,
@@ -91,7 +121,7 @@ summaryInfo = smryMCMC( mcmcCoda ,
 show(summaryInfo)
 # Display posterior information:
 plotMCMC( mcmcCoda , 
-          datFrm=myDataFrame , yName=yName , x1Name=x1Name , x2Name=x2Name ,
+          datFrm , yName=yName , x1Name=x1Name , x2Name=x2Name ,
           x1contrasts=x1contrasts , 
           x2contrasts=x2contrasts , 
           x1x2contrasts=x1x2contrasts ,
@@ -102,7 +132,7 @@ if ( fileNameRoot == "Assn3" ) {
   # THIS x1level minus THAT x1level at AT x2level:
   THISx1 = "family_tax_benefit_a"
   THATx1 = "healthcare_card"
-  ATx2 = "Kooyong"
+  ATx2 = "New South Wales"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -119,7 +149,7 @@ if ( fileNameRoot == "Assn3" ) {
   # THIS x1level minus THAT x1level at AT x2level:
   THISx1 = "family_tax_benefit_a"
   THATx1 = "healthcare_card"
-  ATx2 = "Gellibrand"
+  ATx2 = "South Australia"
   THISidx = which(levels(myDataFrame[,x1Name])==THISx1)
   THATidx = which(levels(myDataFrame[,x1Name])==THATx1)
   ATidx   = which(levels(myDataFrame[,x2Name])==ATx2)
@@ -134,8 +164,8 @@ if ( fileNameRoot == "Assn3" ) {
   saveGraph(file=paste(fileNameRoot,THISx1,"-",THATx1,"At",ATx2,sep=""),
             type=graphFileType)
   # THIS x2level minus THAT x2level at AT x1level:
-  THISx2 = "Gellibrand"
-  THATx2 = "Melbourne"
+  THISx2 = "South Australia"
+  THATx2 = "Victoria"
   ATx1 = "family_tax_benefit_a"
   THISidx = which(levels(myDataFrame[,x2Name])==THISx2)
   THATidx = which(levels(myDataFrame[,x2Name])==THATx2)

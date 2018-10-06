@@ -14,6 +14,7 @@ genMCMC = function( datFrm , yName="y" , x1Name="x1" , x2Name="x2" ,
   #------------------------------------------------------------------------------
   # THE DATA.
   # Convert data file columns to generic x,y variable names for model:
+  datFrm = myDataFrame
   y = as.numeric(datFrm[,yName])
   x1 = as.numeric(as.factor(datFrm[,x1Name]))
   x1levels = levels(as.factor(datFrm[,x1Name]))
