@@ -1,3 +1,0 @@
-"0","```r
-echonest %>% tail() %>% kable(\"html\") %>% kable_styling(full_width=F, bootstrap_options=\"striped\")
-```"

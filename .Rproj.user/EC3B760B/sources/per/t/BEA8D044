@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538544585501.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2310718168",
+    "id" : "BEA8D044",
+    "lastKnownWriteTime" : 1538544386,
+    "last_content_update" : 1538544386,
+    "path" : "~/GitHub/Bayesian.Course.Proj/Course_Project.Rmd",
+    "project_path" : "Course_Project.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
