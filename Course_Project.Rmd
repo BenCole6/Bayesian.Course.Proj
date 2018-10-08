@@ -95,20 +95,20 @@ ggplot(SocialSecLong)+
 
 ```
 
-```{r, echo=TRUE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE}
+```{r, echo=TRUE, fig.height=18, fig.width=10, message=FALSE, warning=FALSE}
 
 SocialSecLong$Commonwealth_Electoral_Division_Name <- as.factor(SocialSecLong$Commonwealth_Electoral_Division_Name)
 
 ggplot(SocialSecLong)+
   geom_boxplot(na.rm=T,
-              aes(x=State, y=amount),
+              aes(x=Commonwealth_Electoral_Division_Name, y=amount),
               col="grey40",
               fill="lightgoldenrod1") +
   coord_flip() +
   labs(title="Distributions of Payment Amounts by Commonwealth Electoral Division",
        caption="(Also referred to as Federal Electoral Division)",
        x="Payment Type", y="Amount") +
-  scale_x_discrete(limits=rev(levels(SocialSecLong$State))) +
+  scale_x_discrete(limits=rev(levels(SocialSecLong$Commonwealth_Electoral_Division_Name))) +
   theme_minimal()
 
 ```
@@ -151,11 +151,14 @@ write.csv(SocialSecLong,
 # The model doesn't work with NA, so NAs will be removed
 
 SocialSecNA.RM <- filter(SocialSecLong, !is.na(`Commonwealth_Electoral_Division_No.`))
-SocialSecNA.RM$Commonwealth_Electoral_Division_No. <- NULL
 
 write.csv(SocialSecNA.RM,
           file="SocialSecNA.RM.csv",
           row.names = F)
+
+SocialSecNA.RM$dupe <- SocialSecNA.RM$Commonwealth_Electoral_Division_No.
+
+
 
 
 ```
