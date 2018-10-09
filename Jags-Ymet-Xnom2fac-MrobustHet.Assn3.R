@@ -111,8 +111,8 @@ genMCMC = function( datFrm=myDataFrame , yName="y" , x1Name="x1" , x2Name="x2" ,
   parameters = c( "b0" ,  "b1" ,  "b2" ,  "b1b2" , "m" , 
                   "a1SD" , "a2SD" , "a1a2SD" ,
                   "ySigma" , "sigmaMode" , "sigmaSD" , "nu" )
-  adaptSteps = 1000 
-  burnInSteps = 2000 
+  adaptSteps = 5000 
+  burnInSteps = 7500 
   runJagsOut <- run.jags( method=runjagsMethod ,
                           model="TEMPmodel.txt" , 
                           monitor=parameters , 

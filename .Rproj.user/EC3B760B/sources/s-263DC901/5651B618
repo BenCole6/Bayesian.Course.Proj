@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539043691731.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5651B618",
+    "lastKnownWriteTime" : 1539054526,
+    "last_content_update" : 1539054526004,
+    "path" : "~/GitHub/Bayesian.Course.Proj/Jags-Ymet-Xnom2fac-MrobustHet.Assn3.Run.R",
+    "project_path" : "Jags-Ymet-Xnom2fac-MrobustHet.Assn3.Run.R",
+    "properties" : {
+        "cursorPosition" : "70,35",
+        "scrollLine" : "56"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

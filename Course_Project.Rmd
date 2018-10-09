@@ -142,7 +142,10 @@ The data set was not provided with any prior knowledge or expectations for the d
 $1$: can also be thought of as deviations
 
 
+
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
+
+SocialSecLong$Commonwealth_Electoral_Division_No. <- NULL
 
 write.csv(SocialSecLong,
           file="SocialSecLong.csv",
@@ -150,10 +153,15 @@ write.csv(SocialSecLong,
 
 # The model doesn't work with NA, so NAs will be removed
 
-SocialSecNA.RM <- filter(SocialSecLong, !is.na(`Commonwealth_Electoral_Division_No.`))
+SocialSecNA.RM <- filter(SocialSecLong,
+                         !is.na(`Commonwealth_Electoral_Division_No.`))
 SocialSecNA.RM$Commonwealth_Electoral_Division_No. <- NULL
 
-write.csv(SocialSecNA.RM,
+SocialSecNA.RM2 <- filter(SocialSecNA.RM,
+                         payment_type=="health_care_card" | payment_type=="family_tax_benefit_a" | payment_type=="family_tax_benefit_b",
+                         State=="New South Wales" | State=="Victoria" | State=="Queensland")
+
+write.csv(SocialSecNA.RM2,
           file="SocialSecNA.RM.csv",
           row.names = F)
 

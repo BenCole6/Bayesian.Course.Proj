@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539043682532.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4180724190",
+    "id" : "806D5371",
+    "lastKnownWriteTime" : 1539054534,
+    "last_content_update" : 1539054534986,
+    "path" : "~/GitHub/Bayesian.Course.Proj/Course_Project.Rmd",
+    "project_path" : "Course_Project.Rmd",
+    "properties" : {
+        "cursorPosition" : "153,0",
+        "scrollLine" : "141"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

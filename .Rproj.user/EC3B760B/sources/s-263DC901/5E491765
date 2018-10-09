@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539044869061.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5E491765",
+    "lastKnownWriteTime" : 1539044639,
+    "last_content_update" : 1539044869061,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "189AF3FA",
+        "caption" : "SocialSecNA.RM2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=SocialSecNA.RM2&cache_key=189AF3FA",
+        "displayedObservations" : 345,
+        "environment" : "",
+        "object" : "SocialSecNA.RM2",
+        "preview" : 0,
+        "totalObservations" : 345,
+        "variables" : 4
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

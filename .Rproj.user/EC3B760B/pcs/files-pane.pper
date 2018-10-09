@@ -1,0 +1,13 @@
+{
+    "path" : "~/GitHub/Bayesian.Course.Proj",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        },
+        {
+            "ascending" : false,
+            "columnIndex" : 3
+        }
+    ]
+}
